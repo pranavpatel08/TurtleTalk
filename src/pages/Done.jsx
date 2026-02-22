@@ -28,17 +28,18 @@ export default function Done() {
   return (
     <div style={{
       background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-      minHeight: '100vh',
+      height: '100vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      justifyContent: 'center',
       padding: 24,
       maxWidth: 420,
       margin: '0 auto',
+      overflow: 'hidden',
+      boxSizing: 'border-box',
     }}>
-      <div style={{ marginTop: 24 }}>
-        <Turtle state="happy" size={180} />
-      </div>
+      <Turtle state="happy" size={160} />
 
       <div style={{
         background: 'white',

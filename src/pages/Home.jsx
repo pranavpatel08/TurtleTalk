@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div style={{
       background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-      minHeight: '100vh',
+      height: '100vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -39,6 +39,7 @@ export default function Home() {
       margin: '0 auto',
       position: 'relative',
       overflow: 'hidden',
+      boxSizing: 'border-box',
     }}>
       {FLOATING_EMOJIS.map((emoji, i) => (
         <span key={i} style={{
