@@ -95,39 +95,25 @@ export default function Talk() {
   return (
     <div style={{
       background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-      minHeight: '100vh',
+      height: '100vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      justifyContent: 'center',
       padding: 24,
       maxWidth: 420,
       margin: '0 auto',
-      position: 'relative',
+      overflow: 'hidden',
+      boxSizing: 'border-box',
     }}>
-      {callStarted && (
-        <button onClick={endChat} style={{
-          position: 'absolute',
-          top: 16,
-          right: 16,
-          padding: '8px 16px',
-          fontSize: 14,
-          fontFamily: "'Fredoka One', cursive",
-          background: '#ff6b6b',
-          color: 'white',
-          border: 'none',
-          borderRadius: 12,
-          cursor: 'pointer',
-        }}>End Chat ✕</button>
-      )}
-
       <h2 style={{
         fontFamily: "'Fredoka One', cursive",
         fontSize: 24,
         color: '#2d7a6f',
-        margin: '16px 0 8px',
+        margin: '0 0 8px',
       }}>Hi {kidName}! 👋</h2>
 
-      <Turtle state={turtleState} size={280} />
+      <Turtle state={turtleState} size={240} />
 
       <div style={{
         background: 'white',
@@ -145,7 +131,7 @@ export default function Talk() {
         alignItems: 'center',
         justifyContent: 'center',
         height: 40,
-        margin: '16px 0',
+        margin: '12px 0',
       }}>
         {Array.from({ length: 7 }).map((_, i) => (
           <div key={i} style={{
@@ -158,11 +144,11 @@ export default function Talk() {
         ))}
       </div>
 
-      <p style={{ fontSize: 14, color: '#888', textAlign: 'center', margin: '0 0 20px' }}>
+      <p style={{ fontSize: 14, color: '#888', textAlign: 'center', margin: '0 0 16px' }}>
         {statusText}
       </p>
 
-      {!callStarted && (
+      {!callStarted ? (
         <button onClick={startVapi} style={{
           width: '100%',
           height: 56,
@@ -174,6 +160,18 @@ export default function Talk() {
           borderRadius: 16,
           cursor: 'pointer',
         }}>Talk to Tammy 🎙️</button>
+      ) : (
+        <button onClick={endChat} style={{
+          width: '100%',
+          height: 56,
+          fontSize: 18,
+          fontFamily: "'Fredoka One', cursive",
+          background: '#ff6b6b',
+          color: 'white',
+          border: 'none',
+          borderRadius: 16,
+          cursor: 'pointer',
+        }}>End Chat ✕</button>
       )}
     </div>
   )
