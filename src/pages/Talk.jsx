@@ -65,18 +65,18 @@ export default function Talk() {
     return (
       <div style={{
         background: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 24,
-        maxWidth: 420,
-        margin: '0 auto',
-        overflow: 'hidden',
-        boxSizing: 'border-box',
-      }}>
-        <Turtle state="idle" size={200} />
+      height: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '24px 32px',
+      width: '100%',
+      margin: '0 auto',
+      overflow: 'hidden',
+      boxSizing: 'border-box',
+    }}>
+      <Turtle state="idle" size={200} />
         <p style={{ fontFamily: "'Fredoka One', cursive", fontSize: 20, color: '#2d7a6f', textAlign: 'center', margin: '20px 0' }}>
           Hmm, Tammy can't hear you right now! 🐢
         </p>
@@ -102,8 +102,8 @@ export default function Talk() {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 24,
-      maxWidth: 420,
+      padding: '24px 32px',
+      width: '100%',
       margin: '0 auto',
       overflow: 'hidden',
       boxSizing: 'border-box',
