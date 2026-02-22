@@ -1,15 +1,16 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import TurtleTest from './pages/TurtleTest'
+import Home from './pages/Home'
+import Talk from './pages/Talk'
+import Done from './pages/Done'
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/turtle-test" element={<TurtleTest />} />
-        <Route path="/" element={<h1>TurtleTalk</h1>} />
+        <Route path="/"     element={<Home />} />
+        <Route path="/talk" element={<Talk />} />
+        <Route path="/done" element={<Done />} />
       </Routes>
     </BrowserRouter>
   )
 }
-
-export default App
